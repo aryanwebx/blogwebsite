@@ -1,6 +1,5 @@
-const text=document.getElementsByClassName('randomtext');
-
-
+// Creating blog Page 
+const text = document.getElementsByClassName('randomtext');
 let blogs = [
     {
         title: "The Ultimate Guide to Traveling on a Budget",
@@ -14,7 +13,7 @@ let blogs = [
         author: "Jane Doe",
         date: "2025-01-02",
         category: "Food",
-        content: text[0].innerText 
+        content: text[0].innerText
     },
     {
         title: "The Future of Technology",
@@ -46,27 +45,54 @@ let blogs = [
     }
 ];
 
-let blogContainer=document.getElementById('blogContainer');
+let blogContainer = document.getElementById('blogContainer');
 
 
-for (let index=0;index<6;index++)
-{
-    let Title=document.createElement('h1');
-    let Author=document.createElement('h2');
-    let Category=document.createElement('h2');
-    let date=document.createElement('h3');
+    let Title = document.createElement('h1');
+    let Author = document.createElement('h2');
+    let Category = document.createElement('h2');
+    let date = document.createElement('h3');
     let content = document.createElement('p');
 
-    Title.innerHTML = blogs[index].title;
-    Author.innerHTML = `Author: ${blogs[index].author}`;
-    Category.innerHTML =`Category: ${blogs[index].category}`;
-    date.innerHTML =`Date: ${blogs[index].date}`;
-    content.innerHTML=blogs[index].content;
+    Title.innerHTML = blogs[0].title;
+    Author.innerHTML = `Author: ${blogs[0].author}`;
+    Category.innerHTML = `Category: ${blogs[0].category}`;
+    date.innerHTML = `Date: ${blogs[0].date}`;
+    content.innerHTML = blogs[0].content;
 
-    blogContainer.appendChild(Title);
-    blogContainer.appendChild(Author);
-    blogContainer.appendChild(Category);
-    blogContainer.appendChild(date);
-    blogContainer.appendChild(content);
+    blogContainer.append(Title, Author, Category, date, content);
 
-}
+
+// Previous and next button functionality
+
+let navigationButton=document.getElementById("navigation-button");
+let index=1;
+
+navigationButton.addEventListener('click',(event)=>{
+    
+    if(event.target.id==='next' && index<6)
+    {
+       
+        Title.innerHTML = blogs[index].title;
+        Author.innerHTML = `Author: ${blogs[index].author}`;
+        Category.innerHTML = `Category: ${blogs[index].category}`;
+        date.innerHTML = `Date: ${blogs[index].date}`;
+        content.innerHTML = blogs[index].content;
+        blogContainer.append(Title, Author, Category, date, content);
+        index=index+1;
+
+    }
+    else if(event.target.id==='previous' && index>0)
+    {
+       
+        index=index-1;
+        Title.innerHTML = blogs[index].title;
+        Author.innerHTML = `Author: ${blogs[index].author}`;
+        Category.innerHTML = `Category: ${blogs[index].category}`;
+        date.innerHTML = `Date: ${blogs[index].date}`;
+        content.innerHTML = blogs[index].content;
+        blogContainer.append(Title, Author, Category, date, content);
+        
+
+    }
+})

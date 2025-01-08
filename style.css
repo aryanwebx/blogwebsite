@@ -94,6 +94,19 @@ a {
   border-radius: 0.5rem;
 }
 
+#create-blog{
+  font-weight: 900;
+  text-align: center;
+  position: absolute;
+  top:70%;
+  left:50%;
+  width:10rem;
+  height: 2rem;
+  background-color: aquamarine;
+  border: 2px rgb(229, 233, 222) solid;
+  border-radius: 0.5rem;
+}
+
 .hero-content {
   position: relative;
   width: 80vw;
@@ -152,6 +165,11 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
   justify-content: center;
+}
+
+.explore-card:hover{
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(197, 83, 31, 0.7);
+  transform: translateY(-5px) translateX(5px);
 }
 
 .explore-card {
