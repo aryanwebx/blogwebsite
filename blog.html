@@ -7,52 +7,6 @@
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-
-        background-color: #f6f6f6;
-    }
-
-    #blogContainer {
-        position: relative;
-        top: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0rem;
-    }
-
-    .randomtext {
-        display: none;
-    }
-
-    #blogContainer p {
-        width: 80vw;
-        height: max-content;
-    }
-
-    #navigation-button {
-        position: relative;
-        top: 6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10rem;
-    }
-
-    div button {
-        background-color: darksalmon;
-        padding: 1rem;
-        border-radius: 2rem;
-        font-size: 1.5rem;
-    }
-</style>
 
 <body>
     <nav>
@@ -108,6 +62,18 @@
     <div id="blogContainer">
 
     </div>
+
+    <div class="note-remind">Click here to make Notes</div>
+    <div id="note-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(176, 22, 66)">
+            <path
+                d="M21 6.75736L19 8.75736V4H10V9H5V20H19V17.2426L21 15.2426V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9.00319 2H19.9978C20.5513 2 21 2.45531 21 2.9918V6.75736ZM21.7782 8.80761L23.1924 10.2218L15.4142 18L13.9979 17.9979L14 16.5858L21.7782 8.80761Z">
+            </path>
+        </svg>
+
+    </div>
+
+
 
     <!-- previous button and next button for access of blog -->
     <div id="navigation-button">
