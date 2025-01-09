@@ -65,20 +65,21 @@ blogContainer.prepend(Title, Author, Category, date, content);
 // Previous and next button functionality
 
 let navigationButton = document.getElementById("navigation-button");
-let index = 1;
+let index = 0;
 
 navigationButton.addEventListener('click', (event) => {
 
 
     if (event.target.id === 'next' && index < 6) {
-
+        index = index + 1;
         Title.innerHTML = blogs[index].title;
         Author.innerHTML = `Author: ${blogs[index].author}`;
         Category.innerHTML = `Category: ${blogs[index].category}`;
         date.innerHTML = `Date: ${blogs[index].date}`;
         content.innerHTML = blogs[index].content;
         blogContainer.prepend(Title, Author, Category, date, content);
-        index = index + 1;
+        document.documentElement.scrollTop = 0; // For modern browsers
+        // document.body.scrollTop = 0; // For older browsers
 
     }
     else if (event.target.id === 'previous' && index > 0) {
@@ -90,11 +91,12 @@ navigationButton.addEventListener('click', (event) => {
         date.innerHTML = `Date: ${blogs[index].date}`;
         content.innerHTML = blogs[index].content;
         blogContainer.prepend(Title, Author, Category, date, content);
+        document.documentElement.scrollTop = 0; // For modern browsers
+        // document.body.scrollTop = 0; // For older browsers
 
     }
 
-    document.documentElement.scrollTop = 0; // For modern browsers
-    document.body.scrollTop = 0; // For older browsers
+
 });
 
 //function which always remind user to take note from blog
@@ -111,4 +113,7 @@ setInterval(() => {
         noteReminder[0].style.display = "none";
         display = display + 1;
     }
-}, 2000) 
+}, 2000)
+
+
+// notes container
