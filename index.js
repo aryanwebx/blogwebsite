@@ -101,7 +101,6 @@ navigationButton.addEventListener('click', (event) => {
 
 //function which always remind user to take note from blog
 let noteReminder = document.getElementsByClassName("note-remind");
-console.log(noteReminder)
 let display = 1;
 setInterval(() => {
 
@@ -115,5 +114,47 @@ setInterval(() => {
     }
 }, 2000)
 
+//Toggle Note taking 
+const noteIcon = document.getElementById("note-icon");
+noteIcon.addEventListener('click', () => {
+    if (localStorage.getItem('notes') !== null && localStorage.getItem('notes') !== "") {
+        const notevalue=document.getElementsByClassName("notesdisplay")
+        notevalue[0].value=`${localStorage.getItem('notes')}`;
+        notevalue[0].style.display='flex';
+        notevalue[0].innerHTML = `${notevalue[0].value}` + '<button id="editNote">Click to Edit Notes.</button>';
+    }
+    else {
+        const noteContainer = document.getElementById("notes-container");
+        noteContainer.style.display = "flex";
+    }
 
-// notes container
+});
+
+
+//Note Taking function
+const noteArea = document.getElementById("textarea");
+noteArea.addEventListener('click', (e) => {
+
+    if (e.target.id === 'textarea') {
+        let noteContent = document.getElementById('note-content');
+        
+    }
+})
+
+// Note saving function
+const saveButton = document.getElementById("save");
+saveButton.addEventListener('click', () => {
+    if (noteArea.value !== '') {
+        localStorage.setItem('notes', `${noteArea.value}`);
+    }
+
+    
+    const noteContainer = document.getElementById("notes-container");
+    noteContainer.style.display = "none";
+
+    if (noteArea.value !== "") {
+        noteArea.value = "";
+    }
+})
+
+//Note edit
