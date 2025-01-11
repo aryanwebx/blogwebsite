@@ -420,13 +420,6 @@ div button {
   font-size: 12px;
 }
 
-/* #textarea textarea{
-  padding: 1rem;
-  width: 40vw;
-  min-height: 20vh;
-  max-height: 80vh;
-} */
-
 /* responsive design */
 @media screen and (max-width: 1024px) {
   .hero-heading {
