@@ -399,15 +399,17 @@ div button {
 }
 
 .notesdisplay {
+  padding:2rem;
   position: fixed;
-  top: 60vh;
-  left: 30vw;
+  top: 50%;
+  left: 20%;
   background-color: white;
-  width: 30vw;
+  width: 50vw;
   min-height: 20vh;
   max-height: 80vh;
   display: none;
   justify-content: center;
+  
 }
 
 #editNote {

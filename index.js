@@ -118,16 +118,19 @@ setInterval(() => {
 const noteIcon = document.getElementById("note-icon");
 noteIcon.addEventListener('click', () => {
     if (localStorage.getItem('notes') !== null && localStorage.getItem('notes') !== "") {
-        const notevalue=document.getElementsByClassName("notesdisplay")
-        notevalue[0].value=`${localStorage.getItem('notes')}`;
-        notevalue[0].style.display='flex';
-        notevalue[0].innerHTML = `${notevalue[0].value}` + '<button id="editNote">Click to Edit Notes.</button>';
+        const notevalue = document.getElementsByClassName("notesdisplay")
+        notevalue[0].value = `${localStorage.getItem('notes')}`;
+        notevalue[0].style.display = 'flex';
+        notevalue[0].innerHTML = `${notevalue[0].value}`;
+        const editNoteButton = document.createElement('button');
+        editNoteButton.setAttribute('id', 'editNote');
+        editNoteButton.innerText = "Click to edit Notes.."
+        notevalue[0].append(editNoteButton)
     }
     else {
         const noteContainer = document.getElementById("notes-container");
         noteContainer.style.display = "flex";
     }
-
 });
 
 
@@ -137,7 +140,7 @@ noteArea.addEventListener('click', (e) => {
 
     if (e.target.id === 'textarea') {
         let noteContent = document.getElementById('note-content');
-        
+
     }
 })
 
@@ -148,7 +151,7 @@ saveButton.addEventListener('click', () => {
         localStorage.setItem('notes', `${noteArea.value}`);
     }
 
-    
+
     const noteContainer = document.getElementById("notes-container");
     noteContainer.style.display = "none";
 
@@ -157,4 +160,16 @@ saveButton.addEventListener('click', () => {
     }
 })
 
-//Note edit
+//EditNote
+noteIcon.addEventListener('click', () => {
+    let notesDisplay = document.getElementsByClassName('notesdisplay');
+    let editButton = notesDisplay[0].childNodes[1];
+    editButton.addEventListener('click', () => {
+        notesDisplay[0].style.display = 'none';
+        const noteContainer = document.getElementById("notes-container");
+        noteContainer.style.display = "flex";
+        noteArea.value=`${localStorage.getItem('notes')}`
+
+    })
+})
+
