@@ -147,11 +147,8 @@ noteArea.addEventListener('click', (e) => {
 // Note saving function
 const saveButton = document.getElementById("save");
 saveButton.addEventListener('click', () => {
-    if (noteArea.value !== '') {
-        localStorage.setItem('notes', `${noteArea.value}`);
-    }
-
-
+    localStorage.setItem('notes', `${noteArea.value}`);
+  
     const noteContainer = document.getElementById("notes-container");
     noteContainer.style.display = "none";
 

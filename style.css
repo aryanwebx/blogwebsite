@@ -241,7 +241,7 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  text-align: left;
+  text-align: left;  
 }
 
 .newsletter-heading {
@@ -279,7 +279,6 @@ section {
 .newsletter-form button {
   background-color: #c67dbc;
   color: #fdfafa;
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   border: none;
@@ -420,6 +419,73 @@ div button {
   font-size: 12px;
 }
 
+.blog-footer {
+  margin-top: 2rem;
+  background-color: #f9f6f9;
+  color: #222;
+  padding: 20px 0;  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff6f61;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+  color: #ff6f61;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.social-links a:hover {
+  background-color: #7a6361;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
 /* responsive design */
 @media screen and (max-width: 1024px) {
   .hero-heading {
@@ -438,6 +504,14 @@ div button {
     width: 25rem;
     height: 20rem;
     border-radius: 1rem;
+  }
+
+  #blogContainer p{
+  font-size: 20px;
+  }
+
+  .note-remind{
+      width:5rem;
   }
 }
 
@@ -496,6 +570,18 @@ div button {
 
   .newsletter-heading {
     margin: 1rem;
+  }
+
+  #note-icon{
+     width:30px;
+     height:30px;
+  }
+
+  #navigation-button{
+       gap:25rem;
+  }
+  .note-remind{
+    font-size: 10px;
   }
 }
 
@@ -590,3 +676,4 @@ div button {
     width: 14rem;
   }
 }
+
