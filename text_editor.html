@@ -6,47 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <style>
-        .container {
-            flex-direction: column;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .texteditor {
-            margin-top: 100px;
-            background-color: white;
-            height: 60vh;
-            width: 90vw;
-
-            outline: 1px solid rgb(3, 3, 3);
-        }
-
-        #texteditortool {
-            background-color: rgb(226, 214, 199);
-            display: flex;
-            justify-content: center;
-            height: 20px;
-            outline: 1px solid rgb(107, 110, 110);
-            gap: 0.5rem;
-        }
-
-        i {
-
-            border: 0.5px solid;
-            color: rgb(12, 12, 12);
-        }
-
-        #texteditorarea {
-            outline: none;
-            padding: 1rem;
-            width: 90vw;
-            height: 96%;
-            resize: none;
-        }
-    </style>
+    <link rel="stylesheet" href="text_editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -99,28 +62,37 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <h1>BlogEditor</h1>
-        <div class="texteditor">
-            <div id="texteditortool">
-                <i class="ri-font-size" id="fontsize"></i>
-                <i class="ri-font-family" id="fontfamily"></i>
-                <i class="ri-font-color" id="fontcolor"></i>
-                <i class="ri-bold" id="bold"></i>
-                <i class="ri-italic" id="italic"></i>
-                <i class="ri-underline" id="underline"></i>
-                <i class="ri-align-left" id="alignleft">
-                    <i class="ri-align-center" id="aligncenter"></i>
-                    <i class="ri-align-right" id="alignright"></i>
-                    <i class="ri-align-justify" id="alignjustify"></i>
-                </i>
-                <i class="ri-list-ordered" id="listordered"></i>
-                <i class="ri-list-unordered" id="listunordered"></i>
-            </div>
-            <textarea name="" id="texteditorarea" contenteditable="true"></textarea>
 
+    <div class="texteditorcontainer">
+        <div class="texteditor">
+            <div class="row">
+                <div class="tools">
+                    <input type="number" name="" id="fontsize" max="80" min="1">
+                    <input type="color" name="" id="fontcolor">
+                    <i class="fa-solid fa-bold" id="bold"></i>
+                    <i class="fa-solid fa-italic" id="italic"></i>
+                    <i class="fa-solid fa-underline" id="underline"></i>
+                    <div id="align">
+                        <i class="fa-solid fa-align-left" id="left"></i>
+                        <i class="fa-solid fa-align-right" id="right"></i>
+                        <i class="fa-solid fa-align-justify" id="justify"></i>
+                        <i class="fa-solid fa-align-center" id="center"></i>
+                    </div>
+                    <i class="fa-solid fa-list-ul" id="listul"></i>
+                    <i class="fa-solid fa-list-ol" id="listol"></i>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <textarea name="" id="Blogarea" placeholder="Start writing your blog...." rows="0"></textarea>
+
+            </div>
         </div>
+
+        <button type="button">Save</button>
     </div>
+
     <script src="./editor.js"></script>
 </body>
 

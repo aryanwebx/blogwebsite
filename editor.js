@@ -1,61 +1,84 @@
-// const fontSize=document.getElementById('fontsize');
-// const fontFamily=document.getElementById('fontfamily');
-// const fontColor=document.getElementById('fontcolor');
-// const bold=document.getElementById('bold');
-// const italic=document.getElementById('italic');
-// const underline=document.getElementById('underline');
-// const alignLeft=document.getElementById('alignleft');
-// const alignCenter=document.getElementById('aligncenter');
-// const alignRight=document.getElementById('alignright');
-// const alignJustify=document.getElementById('alignjustify');
-// const listOrdered=document.getElementById('listordered');
-// const listUnordered=document.getElementById('listunordered');
+let blogcontent = document.getElementById("Blogarea");
+const fontsize=document.getElementById('fontsize');
+const boldButton = document.getElementById('bold');
+const italicButton = document.getElementById('italic');
+const underlineButton = document.getElementById('underline');
+const alignButton = document.getElementById('align');
 
-// function bold(){
-//     let content=document.getElementById('texteditorarea');
-//     content.style.fontWeight="bold"
-// }
-let togglebold = 1
-let content = document.getElementById('texteditorarea');
-const texteditortool = document.getElementById('texteditortool');
-texteditortool.addEventListener('click', (e) => {
 
-    if (e.target.id === 'bold' && togglebold == 1) {
-        content.style.fontWeight = "bold";
-        togglebold = 0;
+fontsize.addEventListener('click',(e)=>{
+    console.log(e.target.value)
+    blogcontent.style.fontSize = `${e.target.value}`;
 
+})
+
+let boldtoggle = true;
+boldButton.addEventListener('click', () => {
+
+    if (boldtoggle) {
+        blogcontent.style.fontWeight = "bold";
+        boldButton.style.backgroundColor = 'rgb(190, 188, 188)';
+        boldButton.style.padding = "2px";
+        boldtoggle = false;
     }
-    else if (e.target.id === 'bold' && togglebold == 0) {
-        content.style.fontWeight = "normal";
-        togglebold = 1;
+    else {
+        blogcontent.style.fontWeight = "normal";
+        boldButton.style.backgroundColor = '';
+        boldButton.style.padding = "0px";
+        boldtoggle = true;
     }
 })
 
-let toggleitalic = 1
-texteditortool.addEventListener('click', (e) => {
 
-    if (e.target.id === 'italic' && toggleitalic == 1) {
-        content.style.fontStyle = "italic";
-        toggleitalic = 0;
+let italictoggle = true;
+italicButton.addEventListener('click', () => {
 
+    if (italictoggle) {
+        blogcontent.style.fontStyle = "italic";
+        italicButton.style.backgroundColor = 'rgb(190, 188, 188)';
+        italicButton.style.padding = "2px";
+        italictoggle = false;
     }
-    else if (e.target.id === 'italic' && toggleitalic == 0) {
-        content.style.fontStyle = "normal";
-        toggleitalic = 1;
-    }
-})
-
-let toggleunderline = 1
-texteditortool.addEventListener('click', (e) => {
-
-    if (e.target.id === 'underline' && toggleunderline == 1) {
-        content.style.textDecoration = "underline";
-        toggleunderline = 0;
-
-    }
-    else if (e.target.id === 'underline' && toggleunderline == 0) {
-        content.style.textDecoration = "none";
-        toggleunderline = 1;
+    else {
+        blogcontent.style.fontStyle = "normal";
+        italicButton.style.backgroundColor = '';
+        italicButton.style.padding = "0px";
+        italictoggle = true;
     }
 })
 
+let underlinetoggle = true;
+underlineButton.addEventListener('click', () => {
+
+    if (underlinetoggle) {
+        blogcontent.style.textDecoration = "underline"
+        underlineButton.style.backgroundColor = 'rgb(190, 188, 188)';
+        underlineButton.style.padding = "2px";
+        underlinetoggle = false;
+    }
+    else {
+        blogcontent.style.textDecoration = "none";
+        underlineButton.style.backgroundColor = '';
+        underlineButton.style.padding = "0px";
+        underlinetoggle = true;
+    }
+})
+
+
+let alignToggleButton = true;
+
+alignButton.addEventListener('click',(e)=>{
+    console.log(e.target.id)
+    if(alignToggleButton){
+    blogcontent.style.textAlign = `${e.target.id}`
+    e.target.style.backgroundColor ='rgb(190,188,188)';
+    e.target.style.padding="2px";
+    alignToggleButton=false;
+    }
+    
+    else{
+        alignToggleButton=true;
+        e.target.style.backgroundColor ='rgb(226, 231, 231)';
+        blogcontent.style.textAlign="left"
+    }
+})
