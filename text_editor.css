@@ -50,3 +50,9 @@
     width:100%;
   
 }
+
+#BlogareaDisplay{
+    background-color: white;
+    padding:2rem;
+    height:57vh;
+}

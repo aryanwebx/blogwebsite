@@ -67,7 +67,7 @@
         <div class="texteditor">
             <div class="row">
                 <div class="tools">
-                    <input type="number" name="" id="fontsize" max="80" min="1">
+                    <input type="number" name="" id="fontsize" max="80" min="1" value="20">
                     <input type="color" name="" id="fontcolor">
                     <i class="fa-solid fa-bold" id="bold"></i>
                     <i class="fa-solid fa-italic" id="italic"></i>
@@ -86,11 +86,12 @@
             </div>
             <div class="row">
                 <textarea name="" id="Blogarea" placeholder="Start writing your blog...." rows="0"></textarea>
+                <div id="BlogareaDisplay" style="display: none;"></div>
 
             </div>
         </div>
 
-        <button type="button">Save</button>
+        <button type="button" id="saveblog">Save</button>
     </div>
 
     <script src="./editor.js"></script>
