@@ -1,3 +1,12 @@
+let readButton=document.getElementsByClassName("read-button");
+for(let index=0;index<readButton.length;index++)
+{
+    readButton[index].addEventListener('click',()=>{
+        window.location.href = "./blog.html";
+    })
+}
+
+
 // Creating blog Page 
 const text = document.getElementsByClassName('randomtext');
 let blogs = [
@@ -148,7 +157,7 @@ noteArea.addEventListener('click', (e) => {
 const saveButton = document.getElementById("save");
 saveButton.addEventListener('click', () => {
     localStorage.setItem('notes', `${noteArea.value}`);
-  
+
     const noteContainer = document.getElementById("notes-container");
     noteContainer.style.display = "none";
 
@@ -165,8 +174,9 @@ noteIcon.addEventListener('click', () => {
         notesDisplay[0].style.display = 'none';
         const noteContainer = document.getElementById("notes-container");
         noteContainer.style.display = "flex";
-        noteArea.value=`${localStorage.getItem('notes')}`
+        noteArea.value = `${localStorage.getItem('notes')}`
 
     })
 })
+
 
