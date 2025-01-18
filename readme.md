@@ -6,7 +6,6 @@ This project is a dynamic and interactive blog website where users can explore, 
 
 - **Responsive Design**: Fully responsive for seamless viewing on any device.
 - **Blog Editor**: A rich text editor to format and style blogs.
-- **Search Functionality**: Search bar to quickly find content.
 - **Categories**: Browse blogs by various categories like Travel, Food, Technology, and more.
 - **Social Media Integration**: Links to social media platforms for easy sharing.
 - **Notes Section**: Create and save personal notes while browsing blogs.
