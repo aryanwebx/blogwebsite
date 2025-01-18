@@ -23,7 +23,7 @@ This project is a dynamic and interactive blog website where users can explore, 
   - Browse through categories and view the latest blogs on the home page.
 
 - **Making Notes**:
-  - Use the note-making section on the `blog.html` page to jot down thoughts.
+  - Use the note-making section on the blog page to jot down thoughts.
 
 ## Technical Details
 
@@ -32,7 +32,7 @@ This project is a dynamic and interactive blog website where users can explore, 
   - Includes reusable components such as headers, footers, and navigation bars.
 
 - **CSS**:
-  - Custom styling with `text_editor.css` for the text editor and general layout.
+  - Custom styling for the text editor and general layout.
   - Fully responsive design using Flexbox and media queries.
 
 - **JavaScript**:
