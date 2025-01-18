@@ -1,58 +1,57 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.texteditorcontainer{
-    width: 100vw;
-    margin-top: 10rem;
-    position:absolute;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap:2rem;
+.texteditorcontainer {
+  width: 100vw;
+  margin-top: 10rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.texteditor{
-    height:60vh;
-    width:80vw;
-    background-color: rgba(235, 230, 230, 0.829);
+.texteditor {
+  height: 60vh;
+  width: 80vw;
+  background-color: rgba(235, 230, 230, 0.829);
 }
 
-
-.tools{
-    width:100%;
-    margin:0px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(226, 231, 231);
+.tools {
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 231, 231);
 }
 
-.fa-solid:active{
-    padding:2px;
-    background-color: rgb(190, 188, 188);
-}
-#fontsize{
-    width:3rem;
+.fa-solid:active {
+  padding: 2px;
+  background-color: rgb(190, 188, 188);
 }
 
-#fontcolor{
-    width:2rem;
+#fontsize {
+  width: 3rem;
 }
 
-#Blogarea{
-    resize:none;
-    border: none;
-   height:57vh;
-    padding:1rem;
-    width:100%;
-  
+#fontcolor {
+  width: 2rem;
 }
 
-#BlogareaDisplay{
-    background-color: white;
-    padding:2rem;
-    height:57vh;
+#Blogarea {
+  resize: none;
+  border: none;
+  height: 57vh;
+  padding: 1rem;
+  width: 100%;
+}
+
+#BlogareaDisplay {
+  background-color: white;
+  padding: 2rem;
+  height: 57vh;
 }

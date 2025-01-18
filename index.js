@@ -1,7 +1,6 @@
-let readButton=document.getElementsByClassName("read-button");
-for(let index=0;index<readButton.length;index++)
-{
-    readButton[index].addEventListener('click',()=>{
+let readButton = document.getElementsByClassName("read-button");
+for (let index = 0; index < readButton.length; index++) {
+    readButton[index].addEventListener('click', () => {
         window.location.href = "./blog.html";
     })
 }

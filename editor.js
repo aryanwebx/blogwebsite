@@ -7,7 +7,7 @@ const underlineButton = document.getElementById('underline');
 const alignButton = document.getElementById('align');
 const listulButton = document.getElementById('listul');
 const listolButton = document.getElementById('listol');
-const saveBlog=document.getElementById('saveblog');
+const saveBlog = document.getElementById('saveblog');
 
 fontsize.addEventListener('input', (e) => {
     blogcontent.style.fontSize = `${e.target.value}` + "px";
@@ -169,6 +169,6 @@ document.getElementById('Blogarea').addEventListener('keydown', function (e) {
 });
 
 // save blog to local storage
-saveBlog.addEventListener('click',()=>{
+saveBlog.addEventListener('click', () => {
     localStorage.setItem('blog', `${blogcontent.value}`);
 })

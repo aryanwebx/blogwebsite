@@ -241,7 +241,7 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  text-align: left;  
+  text-align: left;
 }
 
 .newsletter-heading {
@@ -303,10 +303,14 @@ section {
 }
 
 #blogContainer p {
-  width: 80vw;
+  margin: 35px;
   height: max-content;
   font-size: 30px;
   text-align: justify;
+}
+
+#blogContainer h1 {
+  text-align: center;
 }
 
 #navigation-button {
@@ -338,6 +342,7 @@ div button {
   left: 91vw;
   top: 80vh;
   display: none;
+  color: #fe0098;
 }
 
 #note-icon {
@@ -398,7 +403,7 @@ div button {
 }
 
 .notesdisplay {
-  padding:2rem;
+  padding: 2rem;
   position: fixed;
   top: 50%;
   left: 20%;
@@ -408,7 +413,6 @@ div button {
   max-height: 80vh;
   display: none;
   justify-content: center;
-  
 }
 
 #editNote {
@@ -423,7 +427,7 @@ div button {
   margin-top: 2rem;
   background-color: #f9f6f9;
   color: #222;
-  padding: 20px 0;  
+  padding: 20px 0;
 }
 
 .footer-container {
@@ -445,7 +449,9 @@ div button {
   color: #ff6f61;
 }
 
-.footer-section p, .footer-section ul, .footer-section a {
+.footer-section p,
+.footer-section ul,
+.footer-section a {
   font-size: 14px;
   line-height: 1.8;
   color: #000;
@@ -506,12 +512,12 @@ div button {
     border-radius: 1rem;
   }
 
-  #blogContainer p{
-  font-size: 20px;
+  #blogContainer p {
+    font-size: 20px;
   }
 
-  .note-remind{
-      width:5rem;
+  .note-remind {
+    width: 5rem;
   }
 }
 
@@ -572,15 +578,15 @@ div button {
     margin: 1rem;
   }
 
-  #note-icon{
-     width:30px;
-     height:30px;
+  #note-icon {
+    width: 30px;
+    height: 30px;
   }
 
-  #navigation-button{
-       gap:25rem;
+  #navigation-button {
+    gap: 25rem;
   }
-  .note-remind{
+  .note-remind {
     font-size: 10px;
   }
 }
@@ -657,11 +663,11 @@ div button {
   }
 
   .hero-heading {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-text {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 
   .explore-image {
@@ -677,3 +683,37 @@ div button {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .hero-text {
+    font-size: 0.8rem;
+  }
+
+  .blog-footer {
+    width: 720px;
+  }
+
+  .social-links {
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #navigation-button {
+    gap: 8rem;
+  }
+
+  .note-remind {
+    top: 82vh;
+    font-size: 6px;
+    width: 2.5rem;
+  }
+
+  #note-icon {
+    width: 25px;
+  }
+  
+  #note-icon svg {
+    width: 12px;
+  }
+}
